@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="testapp_plugin2"
+  version="0.0.1">
+
+    <name>TestAppPlugin2</name>
+    <description>TestAppPlugin2 Description</description>
+    <author>Asial Corporation</author>
+    <license>Apache 2.0 License</license>
+    <engines>
+        <engine name="cordova" version=">=3.5.0" />
+    </engines>
+    <js-module src="www/test_app2.js" name="testapp2">
+        <clobbers target="TestApp2" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="TestAppPlugin2"> 
+                <param name="android-package" value="test2.TestAppPlugin2"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/test2/TestAppPlugin2.java" target-dir="src/test2" />        
+    </platform>
+
+</plugin>
